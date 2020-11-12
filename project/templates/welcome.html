@@ -1,0 +1,11 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    {% if current_user.is_authenticated %}
+        <p>Welcome {{ current_user.fname }}! You are now logged in!</p>
+    {% endif %}
+</div>
+
+{% endblock %}
