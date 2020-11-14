@@ -13,12 +13,12 @@ load_dotenv(path)
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
-SERVER = 'ifood-server.database.windows.net'
+SERVER = 'tcp:ifood-server.database.windows.net'
 DATABASE = 'iFood'
-DRIVER = 'ODBC Driver 13 for SQL Server'
+DRIVER = 'ODBC Driver 17 for SQL Server'
 USERNAME = 'dbadmin'
 PASSWORD = os.getenv('DB_PASSWORD')
-app.config['SQLALCHEMY_DATABASE_URI'] = f'Driver='+DRIVER+';Server='+SERVER+',1433;Database='+DATABASE+';Uid='+USERNAME+';Pwd='+PASSWORD+';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'DRIVER={'+DRIVER+'};SERVER='+SERVER+';DATABASE='+DATABASE+';UID='+USERNAME+';PWD='+PASSWORD'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
