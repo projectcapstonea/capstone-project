@@ -15,7 +15,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 SERVER = 'ifood-server.database.windows.net'
 DATABASE = 'iFood'
-DRIVER = 'ODBC Driver 13 for SQL Server'
+DRIVER = '{ODBC Driver 17 for SQL Server}'
 USERNAME = 'dbadmin'
 PASSWORD = os.getenv('DB_PASSWORD')
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mssql://{USERNAME}:{PASSWORD}@{SERVER}/{DATABASE}?driver={DRIVER}'
