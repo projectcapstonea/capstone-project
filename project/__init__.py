@@ -13,7 +13,7 @@ load_dotenv(path)
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
-SERVER = 'tcp:ifood-server.database.windows.net'
+SERVER = 'ifood-server.database.windows.net'
 DATABASE = 'iFood'
 DRIVER = 'SQL Server Native Client 11.0'
 USERNAME = 'dbadmin'
