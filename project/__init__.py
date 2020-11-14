@@ -18,7 +18,7 @@ DATABASE = 'iFood'
 DRIVER = 'ODBC Driver 13 for SQL Server'
 USERNAME = 'dbadmin'
 PASSWORD = os.getenv('DB_PASSWORD')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'Driver={DRIVER};Server='+SERVER+',1433;Database='+DATABASE+';Uid='+USERNAME+';Pwd='+PASSWORD+';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'Driver='+DRIVER+';Server='+SERVER+',1433;Database='+DATABASE+';Uid='+USERNAME+';Pwd='+PASSWORD+';Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
