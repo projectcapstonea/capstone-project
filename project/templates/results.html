@@ -1,0 +1,21 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<div class="content-section" style="padding: 140px 200px 140px 200px;">
+    {{form.hidden_tag()}}
+    <div class="logo" style="text-align:center">
+        <img src="{{ url_for('static', filename='img/announce.svg') }}" width="128" height="128" />
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center active">
+            Restaurant Recommendations
+        </li>
+        {% for item in place %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ item }}
+            <span class="badge badge-primary badge-pill"></span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

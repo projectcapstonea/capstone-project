@@ -3,70 +3,68 @@
 {% block content %}
 <form method="post">
     {{ form.hidden_tag() }}
-    <fieldset class="form-group">
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                {{ form.email.label(class="form-control-label") }}
-                {{ form.email(class="form-control form-control-lg") }}
-            </div>
-            <div class="form-group col-md-4">
-                {{ form.password.label(class="form-control-label") }}
-                {{ form.password(class="form-control form-control-lg") }}
-            </div>
-            <div class="form-group col-md-4">
-                {{ form.confirm_pass.label(class="form-control-label") }}
-                {{ form.confirm_pass(class="form-control form-control-lg") }}
-            </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            {{ form.email.label(class="form-control-label") }}
+            {{ form.email(class="form-control form-control-lg") }}
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                {{ form.fname.label(class="form-control-label") }}
-                {{ form.fname(class="form-control form-control-lg") }}
-            </div>
-            <div class="form-group col-md-4">
-                {{ form.lname.label(class="form-control-label") }}
-                {{ form.lname(class="form-control form-control-lg") }}
-            </div>
-            <div class="form-group col-md-4">
-                {{ form.dob.label(class="form-control-label") }}
-                {{ form.dob(class="form-control form-control-lg") }}
-            </div>
+        <div class="form-group col-md-4">
+            {{ form.password.label(class="form-control-label") }}
+            {{ form.password(class="form-control form-control-lg") }}
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                {{ form.str.label(class="form-control-label") }}
-                {{ form.str(class="form-control form-control-lg") }}
-            </div>
+        <div class="form-group col-md-4">
+            {{ form.confirm_pass.label(class="form-control-label") }}
+            {{ form.confirm_pass(class="form-control form-control-lg") }}
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                {{ form.cty.label(class="form-control-label") }}
-                {{ form.cty(class="form-control form-control-lg") }}
-            </div>
-            <div class="form-group col-md-4">
-                {{ form.trty.label(class="form-control-label") }}
-                {{ form.trty(class="form-control form-control-lg") }}
-            </div>
-            <div class="form-group col-md-4">
-                {{ form.ctry.label(class="form-control-label") }}
-                {{ form.ctry(class="form-control form-control-lg") }}
-            </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            {{ form.fname.label(class="form-control-label") }}
+            {{ form.fname(class="form-control form-control-lg") }}
         </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                {{ form.intr.label(class="form-control-label") }}
-                {{ form.intr(class="form-control form-control-lg") }}
-            </div>
-            <div class="form-group col-md-6">
-                {{ form.pers.label(class="form-control-label") }}
-                {{ form.pers(class="form-control form-control-lg") }}
-            </div>
+        <div class="form-group col-md-4">
+            {{ form.lname.label(class="form-control-label") }}
+            {{ form.lname(class="form-control form-control-lg") }}
         </div>
-        <div class="form-row">
-            <div class="form-group">
-                {{ form.submit(class="btn btn-lg btn-primary btn-block") }}
-            </div>
-        </div>        
-    </fieldset>
+        <div class="form-group col-md-4">
+            {{ form.dob.label(class="datepicker") }}
+            {{ form.dob(class="form-control form-control-lg") }}
+        </div>
+    </div>
+    <div class="form-group">
+        {{ form.str.label(class="form-control-label") }}
+        {{ form.str(class="form-control form-control-lg") }}
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            {{ form.cty.label(class="form-control-label") }}
+            {{ form.cty(class="form-control form-control-lg") }}
+        </div>
+        <div class="form-group col-md-4">
+            {{ form.trty.label(class="form-control-label") }}
+            {{ form.trty(class="form-control form-control-lg") }}
+        </div>
+        <div class="form-group col-md-4">
+            {{ form.ctry.label(class="form-control-label") }}
+            {{ form.ctry(class="form-control form-control-lg") }}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            {{ form.intr.label(class="form-control-label") }}
+            {{ form.intr(class="form-control form-control-lg") }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.pers.label(class="form-control-label") }}
+            {{ form.pers(class="form-control form-control-lg") }}
+        </div>
+    </div>
+    <div class="form-group form-check">
+        {{ form.pref(class="form-check-input", id="emailPreference") }}
+        <p><small>I consent to receiving electronic messages from the iFood platform for recommendation purposes.</small></p>
+    </div>
+    <div class="form-group" style="padding-left: 250px; padding-right: 250px; margin-top: 4.0em; margin-bottom: 8.0em">
+        {{ form.submit(class="btn btn-lg btn-primary btn-block") }}
+    </div>
 </form>
 {% endblock %}

@@ -1,0 +1,21 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<div class="content-section" style="padding: 140px 300px 140px 300px;">
+    {{form.hidden_tag()}}
+    <div class="logo" style="text-align:center">
+        <img src="{{ url_for('static', filename='img/toprated.svg') }}" width="256" height="256" />
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center active">
+            Highly rated restaurants
+        </li>
+        {% for k, v in result.items() %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ k }}
+            <span class="badge badge-primary badge-pill">{{ v }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
