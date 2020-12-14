@@ -25,12 +25,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 .content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
+    padding: 80px 0;
 }
+
+    .content-section form {
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 50px 70px 50px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+        background-color: white;
+    }
+
+        .content-section form .logo {
+            text-align: center;
+            padding: 0 0 50px;
+        }
 
 .article-title {
     color: #444444;
@@ -155,6 +165,7 @@ a.article-title:hover {
     margin: 0 8px;
     color: #fff;
     opacity: 0.75;
+    padding-top: 10px;
 }
 
     .footer-dark .item.social > a:hover {
