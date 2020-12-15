@@ -1,1 +1,1 @@
-web: gunicorn runserver:app
+web: bin/qgtunnel gunicorn runserver:app
